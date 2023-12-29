@@ -1,0 +1,49 @@
+{
+  "name": "@fst/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/app.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "vercel": "vercel dev",
+    "build": "vercel build",
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fst/db": "workspace:^0.1.0",
+    "@fastify/cors": "^8.5.0",
+    "@trpc/client": "next",
+    "@trpc/server": "next",
+    "@types/cors": "^2.8.17",
+    "fastify": "^4.25.2",
+    "superjson": "^2.2.1",
+    "tsx": "^4.7.0",
+    "zod": "^3.22.4",
+    "dotenv": "^16.3.1"
+
+  },
+  "devDependencies": {
+    "@fst/eslint-config": "workspace:^0.2.0",
+    "@fst/prettier-config": "workspace:^0.1.0",
+    "@fst/tsconfig": "workspace:^0.1.0",
+    "eslint": "^8.56.0",
+    "@types/node": "^20.10.5",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "@vercel/node": "^3.0.14"
+
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@fst/eslint-config/base"
+    ]
+  },
+  "prettier": "@fst/prettier-config"
+}
